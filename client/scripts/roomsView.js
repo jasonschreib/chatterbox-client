@@ -7,6 +7,13 @@ var RoomsView = {
   },
 
   render: function() {
+  },
+
+  renderRoom: function () {
+    //needs to create a room
+
+
+    //append this room to ('#rooms select')
   }
 
 };
