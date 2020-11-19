@@ -7,7 +7,7 @@ var Parse = {
     $.ajax({
       url: Parse.server,
       type: 'POST',
-      contentType: "application/json",
+      contentType: 'application/json',
       data: JSON.stringify(message),
       success: successCB,
       error: errorCB
