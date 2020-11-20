@@ -27,13 +27,15 @@
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room:
+        <input type="text" name="newroom" id="newroom"/>
         <select></select>
         <button>Add Room</button>
-        <button>Refresh</button>
+        <button type="refresh" name="refresh" class="refresh">Refresh</button>
       </div>
       <form action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>
         <input type="submit" name="submit" class="submit"/>
+
       </form>
     </div>
     <div id="chats"></div>
@@ -43,6 +45,7 @@
     <script src="client/scripts/friends.js"></script>
     <script src="client/scripts/messages.js"></script>
     <script src="client/scripts/formView.js"></script>
+    <script src="client/scripts/roomView.js"></script>
     <script src="client/scripts/roomsView.js"></script>
     <script src="client/scripts/messageView.js"></script>
     <script src="client/scripts/messagesView.js"></script>

@@ -23,6 +23,7 @@ var App = {
       console.log(data);
       //invoke messagesView.render and supply it with data
       MessagesView.render(data);
+      RoomsView.render(data);
 
       callback();
     });

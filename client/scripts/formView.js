@@ -3,7 +3,9 @@ var FormView = {
   $form: $('form'),
 
   initialize: function() {
+
     FormView.$form.on('submit', FormView.handleSubmit);
+    FormView.$form.on('refresh', FormView.handleRefresh);
   },
 
   handleSubmit: function(event) {
@@ -14,9 +16,6 @@ var FormView = {
     //need to store the message somewhere
     //take the text in #message id and package it in a message object
     //pass it along to Parse.create
-
-
-
 
     // Stop the browser from submitting the form
     event.preventDefault();
@@ -50,6 +49,11 @@ var FormView = {
   setStatus: function(active) {
     var status = active ? 'true' : null;
     FormView.$form.find('input[type=submit]').attr('disabled', status);
+  },
+
+  handleRefresh: function(event) {
+    console.log('click on refresh');
+
   }
 
 };

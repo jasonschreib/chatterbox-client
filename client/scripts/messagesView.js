@@ -9,6 +9,8 @@ var MessagesView = {
   render: function(data) {
     //delegates single messages to renderMessage
 
+
+
     var resultsArray = data.results;
     //iterate over the resultsArray
     for (var i = 0; i < resultsArray.length; i++) {
