@@ -40,7 +40,7 @@ var FormView = {
     };
 
 
-    Parse.create(message);
+    Parse.create(message, function () { location.reload(); });
 
     console.log(message);
     console.log('click!');

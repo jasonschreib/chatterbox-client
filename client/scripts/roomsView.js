@@ -6,7 +6,7 @@ var RoomsView = {
   //this is what happens when you select a room from the dropdown
   initialize: function() {
     //this somehow needs to only grab the message objects with matching roomname and then pass off to messagesview for re-render
-    RoomsView.$select.on('select', RoomsView.roomSelection);
+    RoomsView.$select.on("change", RoomsView.roomSelection);
   },
 
   render: function(data) {
@@ -36,7 +36,11 @@ var RoomsView = {
   },
 
   roomSelection: function (event) {
-
+    //How can I get the room I selected?
+    // var selectedRoom;
+    //filter messages in that room
+    console.log($(this).val());
+    console.log(this);
   }
 
 };
