@@ -21,6 +21,9 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
+      Window.ourData = data;
+      console.log('this is the window data below');
+      console.log(Window.ourData);
       //invoke messagesView.render and supply it with data
       MessagesView.render(data);
       RoomsView.render(data);

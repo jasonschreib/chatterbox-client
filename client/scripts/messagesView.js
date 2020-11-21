@@ -5,16 +5,18 @@ var MessagesView = {
   initialize: function() {
   },
 
-  //this takes in the big array
+  //this takes in the big data object
   render: function(data) {
     //delegates single messages to renderMessage
-
+    console.log('rendering messages');
+    MessagesView.$chats.empty();
 
 
     var resultsArray = data.results;
     //iterate over the resultsArray
     for (var i = 0; i < resultsArray.length; i++) {
       MessagesView.renderMessage(resultsArray[i]);
+      console.log(data.results[i].roomname);
     }
   },
 

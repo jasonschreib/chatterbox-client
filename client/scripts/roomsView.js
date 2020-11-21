@@ -20,7 +20,7 @@ var RoomsView = {
     console.log(roomSet);
       //iterate over the set and send those off to roomsView.renderRoom
       for (var room of roomSet) {
-        console.log(room);
+        // console.log(room);
         var myObj = {'room': room};
         RoomsView.renderRoom(myObj);
       }
@@ -41,6 +41,24 @@ var RoomsView = {
     //filter messages in that room
     console.log($(this).val());
     console.log(this);
+    console.log(Window.ourData);
+    var fullArray = Window.ourData.results;
+    var roomArray = [];
+    for (var i = 0; i < fullArray.length; i++) {
+      //make new data object wtih only that room messages
+      if (fullArray[i].roomname === $(this).val()) {
+        roomArray.push(fullArray[i]);
+      }
+    }
+    console.log(roomArray);
+    var myObj = {'results': roomArray};
+
+    //re-render/pass off to messagesView
+    MessagesView.render(myObj);
+
+
+
+
   }
 
 };

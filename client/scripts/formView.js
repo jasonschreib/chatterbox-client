@@ -28,6 +28,12 @@ var FormView = {
     var ourUserName = ourUserName.slice(10);
     console.log(ourUserName);
 
+    //create roomName
+    var roomName;
+    roomName = $('#newroom').val();
+
+
+
     // var message = {
     //   username: 'Mel Brooks',
   //   text: 'It\'s good to be the king',
@@ -37,6 +43,7 @@ var FormView = {
     var message = {
       username: ourUserName,
       text: textString,
+      roomname: roomName
     };
 
 
