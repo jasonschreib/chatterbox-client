@@ -28,7 +28,7 @@ var RoomsView = {
   },
 
   renderRoom: function (roomObj) {
-    console.log(RoomView.render);
+    //console.log(RoomView.render);
     var htmlText = RoomView.render(roomObj);
 
     //append to the select options dropdown

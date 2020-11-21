@@ -3,6 +3,7 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
+    MessagesView.$chats.on("click", MessagesView.styleChange);
   },
 
   //this takes in the big data object
@@ -35,6 +36,19 @@ var MessagesView = {
 
     //append this to id chats
     MessagesView.$chats.append(htmlText);
+  },
+
+  styleChange: function (event) {
+    //find all divs that match the current selection
+    //console.log($(this).val());
+    console.log(event.target.innerText);
+    var ourFriend = event.target.innerText;
+
+    $(`.username:contains(${ourFriend})`).css('background-color', 'red');
+    //$('.username:contains(' + ourFriend + ')').css('background-color', 'red');
+
+
   }
 
 };
+
